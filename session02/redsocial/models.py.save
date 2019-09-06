@@ -1,0 +1,22 @@
+from django.db import models
+
+class users(models.Model):
+	ID = models.IntegerField(AutoField=true, primary_key)
+	login = models.CharField(max_length=255)
+	email = models.Email.Field(max_length=255)
+password = models.CharField(max_length=255)
+
+class followers(models.Model):
+	followerId = models.IntegerField(AutoField=true, foreign_key=true)
+	followedId = models.IntegerField(foreign_key)
+	id =  models.IntegerField(AutoField=true, foreign_key=true)
+
+class  user_status_updates(models.Model):
+	body = models.CharField(max_length=255)
+   	date = models.DateField()
+
+class hastag(models.Model):
+ 	id = models.BigIntegerField()
+	hastag= models.CharField(max_length=255)
+
+class 
